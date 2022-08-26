@@ -16,8 +16,7 @@ services:
       - ./config/config.xml:/etc/clickhouse-server/config.xml:ro
       - ./config/users.xml:/etc/clickhouse-server/users.xml:ro
       - ./data:/var/lib/clickhouse:rw
-      - ./log/clickhouse-server.log:/var/log/clickhouse-server/clickhouse-server.log:ro
-      - ./log/clickhouse-server.err.log:/var/log/clickhouse-server/clickhouse-server.err.log:ro
+      - ./log:/var/log/clickhouse-server:rw
 
 networks:
   test-bridge:
