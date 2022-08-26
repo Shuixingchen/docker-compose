@@ -1,0 +1,80 @@
+version: '3.4'
+services:
+  node1:
+    image: redis:5.0.5
+    container_name: redis-node1
+    restart: always
+    ports:
+      - 6000:6000
+      - 16000:16000
+    volumes:
+      - /home/csx/docker-compose/redis-cluster/6000/data:/data
+      - /home/csx/docker-compose/redis-cluster/6000:/usr/local/etc/redis
+    # command:
+      # redis-server /usr/local/etc/redis/redis.conf
+ 
+  # node2:
+  #   image: redis:5.0.5
+  #   container_name: redis-node2
+  #   restart: always
+  #   ports:
+  #     - 6001:6001
+  #     - 16001:16001
+  #   volumes:
+  #     - /home/csx/docker-compose/redis-cluster/6001/data:/data
+  #     - /home/csx/docker-compose/redis-cluster/6001:/usr/local/etc/redis
+  #   command:
+  #     redis-server /usr/local/etc/redis/redis.conf
+ 
+ 
+  # node3:
+  #   image: redis:5.0.5
+  #   container_name: redis-node3
+  #   restart: always
+  #   ports:
+  #     - 6002:6002
+  #     - 16002:16002
+  #   volumes:
+  #     - /home/csx/docker-compose/redis-cluster/6002/data:/data
+  #     - /home/csx/docker-compose/redis-cluster/6002:/usr/local/etc/redis
+  #   command:
+  #     redis-server /usr/local/etc/redis/redis.conf
+ 
+  # node4:
+  #   image: redis:5.0.5
+  #   container_name: redis-node4
+  #   restart: always
+  #   ports:
+  #     - 6003:6003
+  #     - 16003:16003
+  #   volumes:
+  #     - /home/csx/docker-compose/redis-cluster/6003/data:/data
+  #     - /home/csx/docker-compose/redis-cluster/6003:/usr/local/etc/redis
+  #   command:
+  #     redis-server /usr/local/etc/redis/redis.conf
+ 
+  # node5:
+  #   image: redis:5.0.5
+  #   container_name: redis-node5
+  #   restart: always
+  #   ports:
+  #     - 6004:6004
+  #     - 16004:16004
+  #   volumes:
+  #     - /home/csx/docker-compose/redis-cluster/6004/data:/data
+  #     - /home/csx/docker-compose/redis-cluster/6004:/usr/local/etc/redis
+  #   command:
+  #     redis-server /usr/local/etc/redis/redis.conf
+ 
+  # node6:
+  #   image: redis:5.0.5
+  #   container_name: redis-node6
+  #   restart: always
+  #   ports:
+  #     - 6005:6005
+  #     - 16005:16005
+  #   volumes:
+  #     - /home/csx/docker-compose/redis-cluster/6005/data:/data
+  #     - /home/csx/docker-compose/redis-cluster/6005:/usr/local/etc/redis
+  #   command:
+      # redis-server /usr/local/etc/redis/redis.conf
