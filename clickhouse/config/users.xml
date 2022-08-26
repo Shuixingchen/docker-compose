@@ -66,7 +66,7 @@
             -->
             <networks incl="networks" replace="replace">
                 <ip>::1</ip>
-        <ip>127.0.0.1</ip>
+                <ip>127.0.0.1</ip>
             </networks>
 
             <!-- Settings profile for user. -->
