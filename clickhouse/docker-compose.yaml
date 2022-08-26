@@ -13,11 +13,11 @@ services:
     expose:
       - 9009
     volumes:
-      - ./config/config.xml:/etc/clickhouse-server/config.xml
-      - ./config/users.xml:/etc/clickhouse-server/users.xml
-      - ./data:/var/lib/clickhouse
-      - ./log/clickhouse-server.log:/var/log/clickhouse-server/clickhouse-server.log
-      - ./log/clickhouse-server.err.log:/var/log/clickhouse-server/clickhouse-server.err.log
+      - ./config/config.xml:/etc/clickhouse-server/config.xml:ro
+      - ./config/users.xml:/etc/clickhouse-server/users.xml:ro
+      - ./data:/var/lib/clickhouse:rw
+      - ./log/clickhouse-server.log:/var/log/clickhouse-server/clickhouse-server.log:ro
+      - ./log/clickhouse-server.err.log:/var/log/clickhouse-server/clickhouse-server.err.log:ro
 
 networks:
   test-bridge:
