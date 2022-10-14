@@ -8,15 +8,17 @@ services:
     env_file:
       - database.env
     volumes:
-      - /home/csx/docker-compose/chainlink-node/data/postgressql:/var/lib/postgressql/data/
+      - /home/csx/docker-compose/chainlink-node/postgressql:/var/lib/postgressql/data/
   chainlink:
     image: "smartcontract/chainlink:1.3.0"
     env_file:
       - .env
+    user:
+      root
     depends_on:
       - pg_chainlink
     ports:
       - 6688:6688
     volumes:
-      - /home/csx/docker-compose/chainlink-node/data/chainlink:/chainlink
+      - /home/csx/docker-compose/chainlink-node/chainlink:/chainlink
     command: node start --password /chainlink/password.txt --api /chainlink/apicredentials.txt
