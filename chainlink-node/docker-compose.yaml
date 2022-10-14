@@ -20,5 +20,5 @@ services:
     ports:
       - 6688:6688
     volumes:
-      - /home/csx/docker-compose/chainlink-node/chainlink:/chainlink
+      - /home/csx/docker-compose/chainlink-node/chainlink-volumes:/chainlink/
     command: node start --password /chainlink/password.txt --api /chainlink/apicredentials.txt
